@@ -1,0 +1,142 @@
+<!--Logo/pic-->
+
+
+<ion-header class="home-bg">
+
+  <ion-toolbar class="home-bg">
+    <ion-title class="ioncontainer size5big">
+      <b>BibloShare</b>
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="ioncontainer" color="light">
+
+  <!-- Sezione Search e Filtri -->
+  <ion-toolbar color="primary" class="searchbar">
+    <br>
+    <!--Searchbar-->
+    <ion-searchbar  color="light" showcancelbutton=""
+    (ionInput)="filterList($event)"></ion-searchbar>
+    <!--Bottone filtro-->
+    <!--modificare il css-->
+    <ion-button class="pad-R" size="small" color="tertiary" margin-start="12px" float-right="true">
+      <ion-menu-button  menu="end"><b class="coloEEE">{{"FILTRI" |translate}}</b></ion-menu-button>
+    </ion-button>
+  </ion-toolbar>
+  <!-- Mah, mi tocca metterlo in toolbar perché non scrolla -->
+  <ion-toolbar color="light" class="ricerca">
+    <ion-list class="lista" color="light">
+
+      <ion-item lines="none" color="light" class="clearboth slide" *ngFor="let i of insertings$">
+        <div class="photo left" align="left" float-left=""></div>
+        <ion-label color="secondary" class="bubble ion-text-wrap" (click)="navInsertingId(i.id)">
+
+          <ion-text color="primary">
+            <p class="fs20 coloGrey"><b>{{i.title}}</b></p>
+
+            <p class="fs16 coloGrey">{{i.genres}}</p>
+            <p class="fs16 mar6" float-right="true">  <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+              {{i.geolocation}}</p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+
+    <br>
+    <ion-item lines="none" color="secondary">
+      <ion-button class="pad5" (click)="navLogin()">LOGIN </ion-button>
+      <ion-button (click)="logout()">LOGOUT </ion-button>
+    </ion-item>
+
+  </ion-toolbar>
+
+
+  <!-- Nuova inserzione -->
+  <!--correggere la posizione del tasto in CSS -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="add_inserting">
+    <ion-fab-button (click)="navNewInserting()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+
+
+
+<!-- Barra inferiore -->
+<ion-footer slot="fixed">
+  <ion-tab-bar color="primary" slot="bottom" slot="fixed" >
+
+    <!--Search page-->
+    <ion-tab-button id="searchId" disabled="true">
+      <ion-icon name="book"></ion-icon>
+      <ion-label> {{"CERCA"|translate}}</ion-label>
+    </ion-tab-button>
+
+    <!--Notifies page, -->
+    <!--aggiungere un badge con numerazione in js -->
+    <ion-tab-button (click)="navNotifications()">
+      <ion-icon name="star"></ion-icon>
+      <ion-label>{{'NOTIFICHE' | translate}}</ion-label>
+    </ion-tab-button>
+
+    <!--Messages page-->
+    <!--ion-tab-button>
+      <ion-icon name="chatboxes"></ion-icon>
+      <ion-label>{{'MESSAGGI' | translate}}</ion-label>
+    </ion-tab-button-->
+
+    <!--Profile page-->
+    <ion-tab-button (click)="navProfile()">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>{{'PROFILO' | translate}}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
+<!--Menu Filtri-->
+<!--Inserire i filtri-->
+<ion-menu side="end" menuId="filterMenuId" class="z100" content-id="main">
+  <ion-header class="shaddy">
+    <ion-toolbar color="secondary">
+      <ion-title class="coloGrey">{{'FILTRI' | translate}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="filtcontent shaddy" color="primary">
+    <form [formGroup]="filters" class="filtri">
+      <ion-list class="filtcontent" color="primary">
+        <!--LISTA PROVINCE SELEZIONABILI-->
+        <ion-badge color="warning">{{'PROVINCIA' | translate}}:</ion-badge>
+        <ion-list lines="bottom" color="light" class="bubble2 ion-text-wrap">
+          <ion-select class="shaddy2" multiple="false" formControlName="filterProvince" cancelText="Annulla" okText="Conferma" placeholder="Provincia">
+            <ion-select-option value=""><i>{{'VUOTO' | translate}}</i></ion-select-option>
+            <ion-select-option *ngFor="let i of province.city" value="{{i}}">{{i}}</ion-select-option>
+          </ion-select>
+
+        </ion-list>
+        <!--LISTA GENERI-->
+        <ion-badge color="success">{{'GENERI' | translate}}:</ion-badge>
+        <ion-list lines="bottom" color="light" class="bubble2 ion-text-wrap">
+          <ion-select class="shaddy2" formControlName="filterGenre" cancelText="Annulla" okText="Conferma" >
+            <ion-select-option value="">{{'VUOTO' | translate}}</ion-select-option>
+            <ion-select-option value="Romanzo">{{'ROMANZO' | translate}}</ion-select-option>
+            <ion-select-option value="Fantascienza">{{'FANTASCIENZA' | translate}}</ion-select-option>
+            <ion-select-option value="Apocalittico">{{'NOTIFICHE' | translate}}</ion-select-option>
+            <ion-select-option value="Politico">{{'POLITICO' | translate}}</ion-select-option>
+            <ion-select-option value="Fantasy">{{'FANTASY' | translate}}</ion-select-option>
+            <ion-select-option value="Avventura">{{'AVVENTURA' | translate}}</ion-select-option>
+            <ion-select-option value="Formazione">{{'FORMAZIONE' | translate}}</ion-select-option>
+            <ion-select-option value="Gotico">{{'GOTICO' | translate}}</ion-select-option>
+            <ion-select-option value="Thriller">{{'THRILLER' | translate}}</ion-select-option>
+            <ion-select-option value="Giallo">{{'GIALLO' | translate}}</ion-select-option>
+            <ion-select-option value="Noir">{{'NOIR' | translate}}</ion-select-option>
+          </ion-select>
+        </ion-list>
+      </ion-list>
+    </form>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main" main></ion-router-outlet>

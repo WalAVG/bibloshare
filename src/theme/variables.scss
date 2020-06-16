@@ -1,0 +1,75 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+  --ion-color-primary: #dfcfb6;
+  --ion-color-primary-rgb: 223,207,182;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0,0,0;
+  --ion-color-primary-shade: #c4b6a0;
+  --ion-color-primary-tint: #e2d4bd;
+
+  --ion-color-secondary: #e4afa9;
+  --ion-color-secondary-rgb: 228,175,169;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0,0,0;
+  --ion-color-secondary-shade: #c99a95;
+  --ion-color-secondary-tint: #e7b7b2;
+
+  --ion-color-tertiary: #dcbb32;
+  --ion-color-tertiary-rgb: 220,187,50;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0,0,0;
+  --ion-color-tertiary-shade: #c2a52c;
+  --ion-color-tertiary-tint: #e0c247;
+
+  --ion-color-success: #1a563a;
+  --ion-color-success-rgb: 26,86,58;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255,255,255;
+  --ion-color-success-shade: #174c33;
+  --ion-color-success-tint: #31674e;
+
+  --ion-color-warning: #c47020;
+  --ion-color-warning-rgb: 196,112,32;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255,255,255;
+  --ion-color-warning-shade: #ac631c;
+  --ion-color-warning-tint: #ca7e36;
+
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235,68,90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34,36,40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  --ion-color-medium: #924f2a;
+  --ion-color-medium-rgb: 146,79,42;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #804625;
+  --ion-color-medium-tint: #9d613f;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244,245,248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  @import url(https://fonts.googleapis.com/css2?family=Crete+Round&display=swap);
+
+}
+

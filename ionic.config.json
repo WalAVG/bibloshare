@@ -1,0 +1,7 @@
+{
+  "name": "BibloShare",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

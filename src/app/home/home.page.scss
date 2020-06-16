@@ -1,0 +1,164 @@
+
+.photo {
+  width: 172px;
+  height: 172px;
+  margin: 10px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-left: 3px;
+  border-radius: 5%;
+  box-shadow: 0 5px 6px 0 rgba(76, 65, 38, 0.57);
+
+  background: url("../../assets/images/book.png") no-repeat;
+  background-size: 100%;
+  z-index: 10;
+}
+.searchbar{
+  box-shadow: 0 5px 6px 0 rgba(76, 65, 38, 0.57);
+  z-index: 10;
+  margin-bottom: 10px;
+}
+
+.photo.left{
+}
+.slide{
+  border-radius: 15px 15px 15px 15px;
+}
+.clearboth{
+  clear: both;
+  margin-bottom: 25px;
+  border-radius: 15px 15px 15px 15px;
+
+}
+.bubble{
+  padding-left: 5px;
+  height: 108px;
+  float: right;
+  margin-left: 0px;
+  background-color: #e4afa9;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 0 5px 6px 0 rgba(76, 65, 38, 0.57);
+
+}
+
+.ricerca{
+  padding-top: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: rgba(0,0,0,0);
+}
+.lista{
+  background-color: rgba(0,0,0,0);
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.fs16{
+  font-size: 16px;
+  padding: 5px;
+
+  font-family: 'Economica', sans-serif;
+  @import url(https://fonts.googleapis.com/css2?family=Economica&display=swap);
+  font-stretch: expanded;
+
+}
+.fs20{
+  margin-top: 3px;
+  padding-left: 5px;
+  font-size: 20px;
+
+  font-family: 'Economica', sans-serif;
+  @import url(https://fonts.googleapis.com/css2?family=Economica&display=swap);
+  font-stretch: expanded;
+
+}
+.coloGrey{
+  color: #333333;
+
+}
+.ioncontainer{
+
+  font-family: 'Economica', sans-serif;
+  @import url(https://fonts.googleapis.com/css2?family=Economica&display=swap);
+  font-stretch: expanded;
+
+}
+.size5big{
+  font-size: 30px;
+}
+
+.home-bg{
+
+  --background: url(
+  "../../../src/assets/images/sfondo1.png") no-repeat center center fixed;
+  --background-size: cover;
+
+}
+.pad-R{
+  height: 24px;
+  width: 74px;
+  font-size: 14px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  color: black;
+
+}
+.z100{
+  z-index: 100;
+  box-shadow:5px 5px 5px rgba(33,33,33,0.5) ;
+}
+.searchinput{
+  box-shadow: inset 5px 5px 5px rgba(33,33,33,0.5);
+}
+.coloEEE{
+  color: #eee;
+}
+.mar6{
+  margin-right: 6px;
+}
+.filtcontent{
+  padding: 10px;
+  background-color: #dfcfb6;
+}
+.city{
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #dfcfb6;
+}
+.shaddy{
+  box-shadow: 5px 0 5px rgba(33,33,33,0.5);
+}
+.shaddy2{
+  border-radius: 15px;
+
+}
+.lightbg{
+  background-color: #dfcfb6;
+}
+.bubble2{
+  padding-left: 5px;
+  height: 38px;
+  max-width: 80%;
+
+  margin-left: 40px;
+  background-color: #f4f5f8;
+  color: rgba(30, 35, 38, 1);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0 5px 6px 0 rgba(76, 65, 38, 0.57);
+
+}
+.itemDiv{
+  height: 15px;
+}
+.home-bg{
+
+  --background: url(
+  "../../../src/assets/images/sfondo2.png") no-repeat center center fixed;
+  --background-size: cover;
+
+}
+
+.pad5{
+  padding: 5px;
+}
